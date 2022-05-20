@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EEB1E832BE62B88B487571D /* Pods_WebSockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13FDC6D762B95848CD287FC /* Pods_WebSockets.framework */; };
+		7881D2062875AB1100CD3603 /* StarscreamWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7881D2052875AB1100CD3603 /* StarscreamWebSocket.swift */; };
 		78D13A212837AE6100F4B34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D13A202837AE6100F4B34B /* AppDelegate.swift */; };
 		78D13A232837AE6100F4B34B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D13A222837AE6100F4B34B /* SceneDelegate.swift */; };
 		78D13A252837AE6100F4B34B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D13A242837AE6100F4B34B /* ViewController.swift */; };
 		78D13A282837AE6100F4B34B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D13A262837AE6100F4B34B /* Main.storyboard */; };
 		78D13A2A2837AE6300F4B34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D13A292837AE6300F4B34B /* Assets.xcassets */; };
 		78D13A2D2837AE6300F4B34B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D13A2B2837AE6300F4B34B /* LaunchScreen.storyboard */; };
+		78D13A372837B39700F4B34B /* NativeWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D13A362837B39700F4B34B /* NativeWebSocket.swift */; };
+		F906E11028745B67001D5C10 /* WebSocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E10F28745B67001D5C10 /* WebSocketDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		519E9D4172E20A9E6C280A9D /* Pods-WebSockets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSockets.release.xcconfig"; path = "Target Support Files/Pods-WebSockets/Pods-WebSockets.release.xcconfig"; sourceTree = "<group>"; };
+		7881D2052875AB1100CD3603 /* StarscreamWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarscreamWebSocket.swift; sourceTree = "<group>"; };
 		78D13A1D2837AE6100F4B34B /* WebSockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D13A202837AE6100F4B34B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D13A222837AE6100F4B34B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		78D13A292837AE6300F4B34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D13A2C2837AE6300F4B34B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78D13A2E2837AE6300F4B34B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D13A362837B39700F4B34B /* NativeWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWebSocket.swift; sourceTree = "<group>"; };
+		D5F690354E2E04B1F9D260C7 /* Pods-WebSockets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSockets.debug.xcconfig"; path = "Target Support Files/Pods-WebSockets/Pods-WebSockets.debug.xcconfig"; sourceTree = "<group>"; };
+		F13FDC6D762B95848CD287FC /* Pods_WebSockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F906E10F28745B67001D5C10 /* WebSocketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEB1E832BE62B88B487571D /* Pods_WebSockets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78C6A408287604B700E76C17 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				78D13A262837AE6100F4B34B /* Main.storyboard */,
+				78D13A2B2837AE6300F4B34B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		78C6A409287604C200E76C17 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				78D13A202837AE6100F4B34B /* AppDelegate.swift */,
+				78D13A222837AE6100F4B34B /* SceneDelegate.swift */,
+				78D13A2E2837AE6300F4B34B /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		78C6A40A287604CD00E76C17 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				78D13A292837AE6300F4B34B /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		78C6A40B287604D600E76C17 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				78D13A242837AE6100F4B34B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		78D13A142837AE6100F4B34B = {
 			isa = PBXGroup;
 			children = (
 				78D13A1F2837AE6100F4B34B /* WebSockets */,
 				78D13A1E2837AE6100F4B34B /* Products */,
+				EBB15D093F551A7FA49C0A87 /* Pods */,
+				E72C1C86FEA2252ADCE05C22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +104,38 @@
 		78D13A1F2837AE6100F4B34B /* WebSockets */ = {
 			isa = PBXGroup;
 			children = (
-				78D13A202837AE6100F4B34B /* AppDelegate.swift */,
-				78D13A222837AE6100F4B34B /* SceneDelegate.swift */,
-				78D13A242837AE6100F4B34B /* ViewController.swift */,
-				78D13A262837AE6100F4B34B /* Main.storyboard */,
-				78D13A292837AE6300F4B34B /* Assets.xcassets */,
-				78D13A2B2837AE6300F4B34B /* LaunchScreen.storyboard */,
-				78D13A2E2837AE6300F4B34B /* Info.plist */,
+				78C6A40B287604D600E76C17 /* ViewControllers */,
+				F906E10E28745B54001D5C10 /* WebSockets */,
+				78C6A409287604C200E76C17 /* Application */,
+				78C6A408287604B700E76C17 /* Storyboards */,
+				78C6A40A287604CD00E76C17 /* Sources */,
+			);
+			path = WebSockets;
+			sourceTree = "<group>";
+		};
+		E72C1C86FEA2252ADCE05C22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F13FDC6D762B95848CD287FC /* Pods_WebSockets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBB15D093F551A7FA49C0A87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F690354E2E04B1F9D260C7 /* Pods-WebSockets.debug.xcconfig */,
+				519E9D4172E20A9E6C280A9D /* Pods-WebSockets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F906E10E28745B54001D5C10 /* WebSockets */ = {
+			isa = PBXGroup;
+			children = (
+				F906E10F28745B67001D5C10 /* WebSocketDelegate.swift */,
+				78D13A362837B39700F4B34B /* NativeWebSocket.swift */,
+				7881D2052875AB1100CD3603 /* StarscreamWebSocket.swift */,
 			);
 			path = WebSockets;
 			sourceTree = "<group>";
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78D13A312837AE6300F4B34B /* Build configuration list for PBXNativeTarget "WebSockets" */;
 			buildPhases = (
+				5F94E2CEB80FB70CC60AF150 /* [CP] Check Pods Manifest.lock */,
 				78D13A192837AE6100F4B34B /* Sources */,
 				78D13A1A2837AE6100F4B34B /* Frameworks */,
 				78D13A1B2837AE6100F4B34B /* Resources */,
+				6FACABA590A944BE8CBF9CC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +208,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F94E2CEB80FB70CC60AF150 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebSockets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FACABA590A944BE8CBF9CC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebSockets/Pods-WebSockets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78D13A192837AE6100F4B34B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				78D13A252837AE6100F4B34B /* ViewController.swift in Sources */,
+				F906E11028745B67001D5C10 /* WebSocketDelegate.swift in Sources */,
+				7881D2062875AB1100CD3603 /* StarscreamWebSocket.swift in Sources */,
 				78D13A212837AE6100F4B34B /* AppDelegate.swift in Sources */,
 				78D13A232837AE6100F4B34B /* SceneDelegate.swift in Sources */,
+				78D13A372837B39700F4B34B /* NativeWebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,19 +402,21 @@
 		};
 		78D13A322837AE6300F4B34B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F690354E2E04B1F9D260C7 /* Pods-WebSockets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5L7239SK4;
+				DEVELOPMENT_TEAM = 4QQM98FBT4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WebSockets/Info.plist;
+				INFOPLIST_FILE = WebSockets/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,19 +432,21 @@
 		};
 		78D13A332837AE6300F4B34B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519E9D4172E20A9E6C280A9D /* Pods-WebSockets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5L7239SK4;
+				DEVELOPMENT_TEAM = 4QQM98FBT4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WebSockets/Info.plist;
+				INFOPLIST_FILE = WebSockets/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
