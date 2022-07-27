@@ -69,7 +69,7 @@ extension StarscreamWebSocket: Starscream.WebSocketDelegate {
             print(bool)
         case .cancelled:
             print("WebSocket cancelled")
-            // FIXME: Понять, почему срабатывает cancel
+            // TODO: Find out the difference between cancellation and discount
             isConnected = false
             delegate?.webSocketDidDisconnect()
         }

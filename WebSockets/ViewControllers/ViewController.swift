@@ -34,12 +34,26 @@ class ViewController: UIViewController {
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            // For iOS 13+
             webSocket = NativeWebSocket(url: url)
-            webSocket?.delegate = self
+        } else {
+            // Up to iOS 13
+            webSocket = StarscreamWebSocket(url: url)
+        }
+        webSocket?.delegate = self
+        
+        
+        // ❗️ If your application requires support for iOS 12 and below,
+        // then you can initialize various implementations of the websocket
+        
+        /*
+        if #available(iOS 13.0, *) {
+            webSocket = NativeWebSocket(url: url)
         } else {
             webSocket = StarscreamWebSocket(url: url)
-            webSocket?.delegate = self
         }
+        webSocket?.delegate = self
+        */
     }
     
     @IBAction func connectButtonPressed(_ sender: UIButton) {
